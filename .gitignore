@@ -1,7 +1,5 @@
 inputs/cherry_dataset/cherry_leaves/test
 inputs/cherry_dataset/cherry_leaves/train
-inputs/cherry_dataset/cherry_leaves/validation
-malaria_detector_model.h5
 kaggle.json
 *.ipynb
 __pycache__/
