@@ -40,8 +40,8 @@ def page_malaria_detector_body():
             pred_proba, pred_class = load_model_and_predict(resized_img, version=version)
             plot_predictions_probabilities(pred_proba, pred_class)
 
-            df_report = df_report.append({"Name":image.name, 'Result': pred_class },
-                                        ignore_index=True)
+            new_entry = pd.DataFrame({"Name": [image.name], "Result": [pred_class]})
+            df_report = pd.concat([df_report, new_entry], ignore_index=True)
         
         if not df_report.empty:
             st.success("Analysis Report")
